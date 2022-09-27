@@ -1,5 +1,6 @@
 import 'package:currency_exchange/models/currency.dart';
 import 'package:currency_exchange/screens/home/components/field_container.dart';
+import 'package:currency_exchange/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class MainMenuCard extends StatefulWidget {
@@ -15,16 +16,14 @@ class _MainMenuCardState extends State<MainMenuCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 227,
-      width: 386,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
       decoration: BoxDecoration(
-        color: const Color(0xffffffff),
+        color: kSwapIconBackgroundColor,
         borderRadius: BorderRadius.circular(25),
         boxShadow: [
           BoxShadow(
-            color: Colors.indigo.withOpacity(0.3),
-            blurRadius: 10,
+            color: Colors.indigo.withOpacity(0.1),
+            blurRadius: 1,
             offset: const Offset(0, 3),
           ),
         ],
@@ -35,7 +34,7 @@ class _MainMenuCardState extends State<MainMenuCard> {
           const Text(
             "Select your currency type",
             style: TextStyle(
-                color: Color(0xff9ba2b0),
+                color: kCoolGrey,
                 fontWeight: FontWeight.w400,
                 fontFamily: "SFProText",
                 fontStyle: FontStyle.normal,
@@ -46,12 +45,12 @@ class _MainMenuCardState extends State<MainMenuCard> {
             child: DropdownButton(
               value: dropDownValue,
               underline: const SizedBox(),
-              dropdownColor: const Color(0xffedf0f6),
+              dropdownColor: kPaleGreyOne,
               isExpanded: true,
               borderRadius: BorderRadius.circular(25),
               icon: const Icon(
                 Icons.keyboard_arrow_down,
-                color: Color(0xff333333),
+                color: kBlack,
               ),
               items: Currency.data.map((Currency items) {
                 return DropdownMenuItem(
@@ -69,7 +68,7 @@ class _MainMenuCardState extends State<MainMenuCard> {
                       Text(
                         items.Symbol,
                         style: const TextStyle(
-                          color: Color(0xff9ba2b0),
+                          color: kCoolGrey,
                         ),
                       ),
                     ],
@@ -87,7 +86,7 @@ class _MainMenuCardState extends State<MainMenuCard> {
           const Text(
             "Enter your currency",
             style: TextStyle(
-                color: Color(0xff9ba2b0),
+                color: kCoolGrey,
                 fontWeight: FontWeight.w400,
                 fontFamily: "SFProText",
                 fontStyle: FontStyle.normal,
@@ -96,14 +95,14 @@ class _MainMenuCardState extends State<MainMenuCard> {
           const SizedBox(height: 6),
           Row(
             children: const [
-              Icon(Icons.attach_money, color: Color(0xff9ba2b0)),
+              Icon(Icons.attach_money, color: kCoolGrey),
               SizedBox(width: 13),
               Expanded(
                 child: FieldContainer(
                   child: TextField(
                     keyboardType: TextInputType.number,
                     style: TextStyle(
-                        color: Color(0xff6a717f),
+                        color: kDarkGrey,
                         fontWeight: FontWeight.w700,
                         fontFamily: "SFProText",
                         fontStyle: FontStyle.normal,

@@ -1,4 +1,5 @@
 import 'package:currency_exchange/screens/home/components/home_body.dart';
+import 'package:currency_exchange/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,12 +13,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xfff7f8f9),
+      backgroundColor: kPaleGreyTwo,
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(14.0),
-          child: SingleChildScrollView(child: HomeBody()),
-        ),
+        child: HomeBody(),
       ),
     );
   }

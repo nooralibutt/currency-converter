@@ -1,3 +1,4 @@
+import 'package:currency_exchange/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class FieldContainer extends StatelessWidget {
@@ -10,7 +11,7 @@ class FieldContainer extends StatelessWidget {
     return Container(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
-          color: const Color(0xffedf0f6),
+          color: kPaleGreyOne,
           borderRadius: BorderRadius.circular(25),
         ),
         child: child);

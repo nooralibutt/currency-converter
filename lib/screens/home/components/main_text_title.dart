@@ -1,3 +1,4 @@
+import 'package:currency_exchange/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
 
 class MainTextTitle extends StatelessWidget {
@@ -8,10 +9,9 @@ class MainTextTitle extends StatelessWidget {
     return const Text(
       "Currency Converter",
       style: TextStyle(
-          color: Color(0xff333333),
+          color: kBlack,
           fontWeight: FontWeight.w400,
           fontFamily: "SFProText",
-          fontStyle: FontStyle.normal,
           fontSize: 20.0),
     );
   }
